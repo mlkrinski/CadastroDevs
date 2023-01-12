@@ -22,7 +22,6 @@ let inputRows = 0;
 
 addTechBtn.addEventListener("click", function (ev) {
   const stackInputs = document.getElementById("stackInputs");
-
   const newRow = document.createElement("li");
   const rowIndex = inputRows;
   inputRows++;
@@ -88,12 +87,10 @@ form.addEventListener("submit", function (ev) {
   inputRows.forEach(function (row) {
     // #rowId input[name="techName"]
     const techName = document.querySelector(
-      "#" + row.id + 'input[name="techName"]'
+      "#" + row.id + ' input[name="techName"]'
     ).value;
-    console.log(techName);
-
     const techExp = document.querySelector(
-      "#" + row.id + 'input[type="radio"]:checked'
+      "#" + row.id + ' input[type="radio"]:checked'
     ).value;
     technologies.push({ name: techName, exp: techExp });
   });
